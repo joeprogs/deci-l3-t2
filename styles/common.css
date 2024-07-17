@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0070ef;
+  transition: color ease-in 250ms;
+}
+
+a:hover {
+  color: #499bf9;
+}
+
+button, input, textarea {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+input, textarea {
+  border: 1px solid black;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #0070ef;
+  transition: background-color ease-in 250ms;
+}
+
+button:hover {
+  background-color: #499bf9;
+}
+
+header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: black;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color ease-in 250ms;
+}
+
+nav a:hover {
+  color: black;
+  background-color: #00000012;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  padding: 1rem 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-title {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  transition: background-color ease-in 250ms;
+}
+
+.active {
+  background-color: #e4e4e4;
+}
+
+section:not(:last-child) * {
+  max-width: calc(50% - 4rem);
+}
+
+section > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.align-end {
+  align-items: end;
+  text-align: end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 60rem) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  section:not(:last-child) * {
+    max-width: 100%;
+  }
+}
+
+/* I'm too lazy to make the nav responsive lol */
+@media screen and (max-width: 52rem) {
+  nav {
+    display: none;
+  }
+}
